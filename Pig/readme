@@ -1,4 +1,4 @@
-The preinput shell script removes nulls and other abnormalities from the csv.
+The prepinput shell script removes nulls and other abnormalities from the csv.
 The pig script load data from HDFS using pig storage, provides schema and performs joins.
 (P.S.: Doing the same thing in Spark is less painful)
 The Data Visualization repo contains some visualizations built on this data
