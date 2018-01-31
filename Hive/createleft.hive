@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS personname;
+
+CREATE TABLE `personname`(
+        `id` string,
+        `name` string,
+        `description` string)
+      ROW FORMAT DELIMITED
+      FIELDS TERMINATED BY ',';
+LOAD DATA 
+  LOCAL INPATH 'left.csv' 
+  INTO TABLE personname;

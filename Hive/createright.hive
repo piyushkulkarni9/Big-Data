@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS personzip;
+
+CREATE TABLE `personzip`(
+        `id` string,
+        `zip` string,
+        `description` string)
+      ROW FORMAT DELIMITED
+      FIELDS TERMINATED BY ',';
+
+LOAD DATA 
+  LOCAL INPATH 'right.csv' 
+  INTO TABLE personzip;

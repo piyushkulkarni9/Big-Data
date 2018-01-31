@@ -1,0 +1,4 @@
+            SELECT theleft.id, theright.id, theleft.name, theright.zip
+              FROM personname AS theleft 
+   FULL OUTER JOIN personzip AS theright
+                ON theleft.id = theright.id;
