@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS total_pop_text; 
+
+CREATE TABLE total_pop_text(
+`zipcode` string,
+`totpop` int)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ',';
+
+LOAD DATA LOCAL 
+INPATH 'data/zip_totpop.csv'
+OVERWRITE INTO TABLE total_pop_text;

@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS total_pop_orc;
+
+CREATE TABLE total_pop_orc(
+`zipcode` string,
+`totpop` int)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS ORC;
+ 
+INSERT INTO TABLE total_pop_orc 
+SELECT * FROM total_pop_text;

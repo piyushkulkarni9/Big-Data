@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS female_pop_orc;
+
+CREATE TABLE female_pop_orc(
+`zipcode` string,
+`femalepop` int)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS ORC;
+ 
+INSERT INTO TABLE female_pop_orc 
+SELECT * FROM female_pop_text;

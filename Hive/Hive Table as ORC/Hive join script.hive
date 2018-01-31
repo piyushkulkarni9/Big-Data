@@ -1,0 +1,8 @@
+
+SET hive.cli.print.header=true;
+
+SELECT m.zipcode , abs(m.malepop - f.femalepop) AS diff
+FROM male_pop_text AS m, female_pop_text AS f
+WHERE m.malepop > 0 AND f.femalepop > 0 AND  m.zipcode = f.zipcode
+ORDER BY diff desc LIMIT 5;
+

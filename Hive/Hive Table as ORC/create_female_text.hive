@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS female_pop_text;
+  
+CREATE TABLE female_pop_text(
+`zipcode` string,
+`femalepop` int)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ',';
+ 
+LOAD DATA LOCAL 
+INPATH 'data/zip_femalepop.csv'
+OVERWRITE INTO TABLE female_pop_text; 
