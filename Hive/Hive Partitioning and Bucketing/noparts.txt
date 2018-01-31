@@ -1,0 +1,36 @@
+# col_name            	data_type           	comment             
+	 	 
+thegroup            	int                 	                    
+randgroup           	int                 	                    
+firstnum            	bigint              	                    
+secondnum           	double              	                    
+thirdnum            	double              	                    
+	 	 
+# Detailed Table Information	 	 
+Database:           	default             	 
+Owner:              	root                	 
+CreateTime:         	Thu Oct 26 00:52:56 UTC 2017	 
+LastAccessTime:     	UNKNOWN             	 
+Protect Mode:       	None                	 
+Retention:          	0                   	 
+Location:           	hdfs://sandbox.hortonworks.com:8020/apps/hive/warehouse/noparts	 
+Table Type:         	MANAGED_TABLE       	 
+Table Parameters:	 	 
+	numFiles            	1                   
+	numRows             	0                   
+	rawDataSize         	0                   
+	totalSize           	544937              
+	transient_lastDdlTime	1508979179          
+	 	 
+# Storage Information	 	 
+SerDe Library:      	org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe	 
+InputFormat:        	org.apache.hadoop.mapred.TextInputFormat	 
+OutputFormat:       	org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat	 
+Compressed:         	No                  	 
+Num Buckets:        	-1                  	 
+Bucket Columns:     	[]                  	 
+Sort Columns:       	[]                  	 
+Storage Desc Params:	 	 
+	field.delim         	\t                  
+	line.delim          	\n                  
+	serialization.format	\t                  

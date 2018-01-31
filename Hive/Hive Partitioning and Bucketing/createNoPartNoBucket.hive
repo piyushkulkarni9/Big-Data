@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS noparts;
+
+CREATE TABLE noparts(
+        thegroup int,
+        randgroup int,
+        firstnum bigint,
+        secondnum double,
+        thirdnum double)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INPATH '10kLines.tsv' INTO TABLE noparts;

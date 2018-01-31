@@ -1,0 +1,34 @@
+# col_name            	data_type           	comment             
+	 	 
+randgroup           	int                 	                    
+firstnum            	bigint              	                    
+secondnum           	double              	                    
+thirdnum            	double              	                    
+	 	 
+# Partition Information	 	 
+# col_name            	data_type           	comment             
+	 	 
+thegroup            	int                 	                    
+	 	 
+# Detailed Table Information	 	 
+Database:           	default             	 
+Owner:              	root                	 
+CreateTime:         	Thu Oct 26 01:13:15 UTC 2017	 
+LastAccessTime:     	UNKNOWN             	 
+Protect Mode:       	None                	 
+Retention:          	0                   	 
+Location:           	hdfs://sandbox.hortonworks.com:8020/apps/hive/warehouse/tblwithbuckets	 
+Table Type:         	MANAGED_TABLE       	 
+Table Parameters:	 	 
+	transient_lastDdlTime	1508980395          
+	 	 
+# Storage Information	 	 
+SerDe Library:      	org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe	 
+InputFormat:        	org.apache.hadoop.mapred.TextInputFormat	 
+OutputFormat:       	org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat	 
+Compressed:         	No                  	 
+Num Buckets:        	10                  	 
+Bucket Columns:     	[randgroup]         	 
+Sort Columns:       	[]                  	 
+Storage Desc Params:	 	 
+	serialization.format	1                   

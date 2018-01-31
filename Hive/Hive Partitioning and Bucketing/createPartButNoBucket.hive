@@ -1,0 +1,22 @@
+set hive.exec.dynamic.partition=true;  
+set hive.exec.dynamic.partition.mode=nonstrict;
+
+DROP TABLE IF EXISTS groupspartitioned;
+
+CREATE TABLE groupspartitioned (
+             randgroup int,
+             firstnum bigint,
+             secondnum double,
+             thirdnum double)
+PARTITIONED BY(thegroup int)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n';
+
+INSERT OVERWRITE TABLE groupspartitioned PARTITION(thegroup)  
+SELECT randgroup, 
+       firstnum, 
+       secondnum, 
+       thirdnum, 
+       thegroup 
+  FROM noparts;

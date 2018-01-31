@@ -1,0 +1,21 @@
+set hive.exec.dynamic.partition=true;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.enforce.bucketing = true;
+
+DROP TABLE IF EXISTS tblwithbuckets;
+
+CREATE TABLE tblwithbuckets (
+        randgroup int,
+        firstnum bigint,
+        secondnum double,
+        thirdnum double)
+PARTITIONED BY(thegroup int)
+CLUSTERED BY(randgroup) INTO 100 BUCKETS;
+
+INSERT OVERWRITE TABLE tblwithbuckets PARTITION(thegroup)
+SELECT randgroup, 
+       firstnum, 
+       secondnum, 
+       thirdnum, 
+       thegroup
+  FROM noparts;
