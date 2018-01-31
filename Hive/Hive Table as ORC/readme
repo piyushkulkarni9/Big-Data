@@ -1,0 +1,1 @@
+The scripts create hive tables by loading data from csv and then store it as ORC. 
